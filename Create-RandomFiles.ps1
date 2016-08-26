@@ -160,7 +160,7 @@ function Create-Files
 			}
 			while (Test-Path $filepath)
 			{
-				$filepath = $filepath + "Copy"	
+				$filepath = ($filepath.replace("."+ $filepart4, 'Copy')) + "." + $filepart4
 			}
 			Remove-Variable tempsize -erroraction SilentlyContinue
 			while ($TempSize -le $filesize)
@@ -189,4 +189,4 @@ Create-Files -Path c:\Temp\blog -FileTypes log, log1, log2, log3, log4, log5, lo
 Create-Files -Path c:\Temp\blog -FileTypes log, log1, log2, log3, log4, log5, log6, log7, log8 -Size 4 -Count 1000 -Variance 2 -SubDirectories True -SubDirectoryCreateChance 25
 Create-Files -Path c:\Temp\blog -FileTypes log, log1, log2, log3, log4, log5, log6, log7, log8 -Size 1 -Count 20000 -SubDirectories True -SubDirectoryCreateChance 50
 #>
-
+Create-Files -Path c:\Temp\blog -FileTypes log, log1, log2, log3, log4, log5, log6, log7, log8 -Size 1 -Count 20000 -SubDirectories True -SubDirectoryCreateChance 50
