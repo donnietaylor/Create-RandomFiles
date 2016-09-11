@@ -29,6 +29,9 @@ This function will supply any number of files approximately at the size you requ
 	.PARAMETER SubDirectoryCreateChance
 		The chance that a subdirectory will be created.  Larger numbers here will actually make it less likely that a subdirectory is created.  A number of 20 means that 1-in-20 will create a subdirectory.  A number of 100 means that 1-100 will create a subdirectory.
 	
+	.PARAMETER SizeMeasurement
+		The measurement type that is used for both the file size and the variance.  Valid values are KB, MB, GB.  
+	
 	.EXAMPLE
 		PS C:\> Create-Files -Path c:\Temp\blog -FileTypes log, log1, log2, log3, log4, log5, log6, log7, log8 -Size 3 -Count 100
 	
@@ -39,5 +42,5 @@ This function will supply any number of files approximately at the size you requ
 		PS C:\> Create-Files -Path c:\Temp\blog -FileTypes log, log1, log2, log3, log4, log5, log6, log7, log8 -Size 10 -Count 50 -Variance 4 -SubDirectories True -SubDirectoryCreateChance 10
 	
 	.NOTES
-		Additional information about the function.
+		Exact sizes aren't possible with this method, since we are adding actual text to the files.  If exact sizes are necessary, you can create a blank file with the appropriate size.
 #>
