@@ -23,7 +23,7 @@
 		Specify if this script should create subdirectories under the directory specified by the Path parameter.  Directories will have random names similar to file names, and there is a random chance of them being created (specified by the SubDirectoryCreateChance parameter)
 	
 	.PARAMETER Count
-		The number of files to create under the directory specified by the Path parameter.
+		The number of files to create under the directory specified by the Path parameter
 	
 	.PARAMETER SubDirectoryCreateChance
 		The chance that a subdirectory will be created.  Larger numbers here will actually make it less likely that a subdirectory is created.  A number of 20 means that 1-in-20 will create a subdirectory.  A number of 100 means that 1-100 will create a subdirectory.
