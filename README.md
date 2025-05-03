@@ -3,7 +3,7 @@ This function will supply any number of files approximately at the size you requ
 
 <#
 	.SYNOPSIS
-		Creates a number of auto-generated files in the spcified directories.
+		Creates a number of auto-generated files in the spcified directories.  Useful for testing.
 	
 	.DESCRIPTION
 		This function will supply any number of files approximately at the size you request.  Rather than setting a file size, this function actually fills the files with text until they reach the requested size.  You can control the number of files, size of files, and whether or not to create random sub-directories.
